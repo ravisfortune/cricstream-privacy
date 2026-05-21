@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — CricStream</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #07090F;
+      color: #E8EAF0;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    .logo { font-size: 28px; font-weight: 900; color: #00E5A0; margin-bottom: 4px; }
+    .logo span { color: #E8EAF0; }
+    h1 { font-size: 22px; font-weight: 800; color: #E8EAF0; margin: 24px 0 6px; }
+    .updated { font-size: 13px; color: #6B7280; margin-bottom: 40px; }
+    h2 { font-size: 15px; font-weight: 700; color: #00E5A0; margin: 32px 0 10px; text-transform: uppercase; letter-spacing: 1px; }
+    p { font-size: 15px; color: #9CA3AF; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 15px; color: #9CA3AF; margin-bottom: 6px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 14px; }
+    th { text-align: left; padding: 10px 14px; background: #111827; color: #00E5A0; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+    td { padding: 10px 14px; border-top: 1px solid #1F2937; color: #9CA3AF; }
+    td a { color: #00E5A0; text-decoration: none; }
+    .contact-box { background: #111827; border: 1px solid #1F2937; border-radius: 12px; padding: 20px 24px; margin-top: 32px; }
+    .contact-box p { margin: 0; color: #9CA3AF; }
+    .contact-box a { color: #00E5A0; }
+    hr { border: none; border-top: 1px solid #1F2937; margin: 36px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="logo">Cric<span>Stream</span></div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: May 21, 2026</p>
+
+    <h2>1. Overview</h2>
+    <p>CricStream ("the app", "we", "us") is a cricket scoring and live streaming application for iOS and Android. This policy explains what data we collect, why, and how it is used.</p>
+
+    <h2>2. Data We Collect</h2>
+    <p><strong style="color:#E8EAF0">Account Data</strong></p>
+    <ul>
+      <li>Email address and display name (via Google Sign-In)</li>
+      <li>Profile avatar (optional, uploaded by you)</li>
+    </ul>
+    <p><strong style="color:#E8EAF0">Match &amp; Scoring Data</strong></p>
+    <ul>
+      <li>Teams, player names, and roles you create</li>
+      <li>Ball-by-ball match scores and commentary</li>
+      <li>Match results and scorecards</li>
+    </ul>
+    <p><strong style="color:#E8EAF0">YouTube / Google Data</strong></p>
+    <ul>
+      <li>Google OAuth access token — stored on-device only, never on our servers</li>
+      <li>YouTube live stream RTMP configuration — stored encrypted on-device</li>
+      <li>We do <strong>not</strong> store your YouTube credentials or access any YouTube content beyond what is needed to create and manage your live streams</li>
+    </ul>
+    <p><strong style="color:#E8EAF0">Usage Data</strong></p>
+    <ul>
+      <li>Crash reports via Firebase Crashlytics (anonymised device info and stack traces only)</li>
+      <li>No behavioural analytics, no ad tracking</li>
+    </ul>
+
+    <h2>3. How We Use Your Data</h2>
+    <ul>
+      <li>Provide core app functionality: ball-by-ball scoring, scorecards, live streaming</li>
+      <li>Sync your match data across sessions via Supabase (your data only, never shared)</li>
+      <li>Create and manage YouTube Live broadcasts on your behalf when you tap "Go Live"</li>
+      <li>Display a live score overlay on your YouTube stream</li>
+      <li>Diagnose crashes and improve app stability</li>
+    </ul>
+
+    <h2>4. YouTube API Usage</h2>
+    <p>CricStream uses the YouTube Data API v3 to:</p>
+    <ul>
+      <li>Create a live broadcast on your YouTube channel when you start a stream</li>
+      <li>Bind that broadcast to your RTMP stream endpoint</li>
+      <li>Transition the broadcast to live / complete status</li>
+    </ul>
+    <p>We request only the minimum YouTube permissions necessary. Your YouTube data is used solely to operate the live streaming feature you explicitly initiate. We do not read, store, or analyse any other YouTube content from your account.</p>
+    <p>Our use of YouTube API Services is also subject to the <a href="https://www.youtube.com/t/terms" style="color:#00E5A0">YouTube Terms of Service</a> and <a href="https://policies.google.com/privacy" style="color:#00E5A0">Google Privacy Policy</a>.</p>
+
+    <h2>5. Data Storage &amp; Security</h2>
+    <ul>
+      <li>All match data is stored in Supabase (hosted on AWS, eu-west region)</li>
+      <li>Access is controlled by Row-Level Security — you can only read and write your own data</li>
+      <li>Google OAuth tokens are stored in the device's encrypted secure storage (iOS Keychain / Android Keystore)</li>
+      <li>We do not sell, rent, or share your personal data with third parties</li>
+    </ul>
+
+    <h2>6. Third-Party Services</h2>
+    <table>
+      <tr><th>Service</th><th>Purpose</th><th>Privacy Policy</th></tr>
+      <tr><td>Supabase</td><td>Database &amp; Authentication</td><td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td></tr>
+      <tr><td>Google / YouTube</td><td>Sign-In &amp; Live Streaming</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+      <tr><td>Firebase Crashlytics</td><td>Crash reporting</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
+    </table>
+
+    <h2>7. Data Retention</h2>
+    <p>Your account and match data are retained until you delete your account. To delete your account and all associated data, contact us at the email below and we will action your request within 30 days.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>CricStream is rated 4+ and does not knowingly collect personal data from children under 13. If you believe a child has provided personal information, contact us and we will delete it promptly.</p>
+
+    <h2>9. Your Rights</h2>
+    <p>You may request access to, correction of, or deletion of your personal data at any time by contacting us. If you are in the EU/EEA, you also have the right to lodge a complaint with your local data protection authority.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this policy from time to time. Continued use of the app after changes constitutes acceptance. The "last updated" date above will always reflect the most recent revision.</p>
+
+    <hr />
+
+    <div class="contact-box">
+      <p><strong style="color:#E8EAF0">Contact</strong></p>
+      <p>For privacy-related questions or data deletion requests:</p>
+      <p><a href="mailto:ravisfortune@gmail.com">ravisfortune@gmail.com</a></p>
+    </div>
+
+  </div>
+</body>
+</html>
