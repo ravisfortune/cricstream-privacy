@@ -37,7 +37,7 @@
 
     <div class="logo">Cric<span>Stream</span></div>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: September 2026</p>
+    <p class="updated">Last updated: October 2026</p>
 
     <h2>1. Overview</h2>
     <p>CricStream ("the app", "we", "us") is a cricket scoring and live streaming application for iOS and Android. This policy explains what data we collect, why, and how it is used.</p>
@@ -45,14 +45,18 @@
     <h2>2. Data We Collect</h2>
     <p><strong style="color:#E8EAF0">Account Data</strong></p>
     <ul>
-      <li>Email address and display name (via Google Sign-In)</li>
+      <li>Email address and display name, from the account you create</li>
       <li>Profile avatar (optional, uploaded by you)</li>
     </ul>
     <p><strong style="color:#E8EAF0">Match &amp; Scoring Data</strong></p>
     <ul>
-      <li>Teams, player names, and roles you create</li>
-      <li>Ball-by-ball match scores and commentary</li>
+      <li>Teams, player names, and roles you create, and any team logo or player photo you add</li>
+      <li>Ball-by-ball match scores</li>
       <li>Match results and scorecards</li>
+    </ul>
+    <p><strong style="color:#E8EAF0">Tournament Contact Numbers</strong></p>
+    <ul>
+      <li>If you organise a tournament, you can add your own contact phone number and the phone numbers of team captains. Both are optional. See <a href="#phone" style="color:#00E5A0">Phone Numbers in Tournaments</a></li>
     </ul>
     <p><strong style="color:#E8EAF0">YouTube / Google Data</strong></p>
     <ul>
@@ -63,22 +67,25 @@
     <p><strong style="color:#E8EAF0">Device Permissions</strong></p>
     <ul>
       <li><strong>Camera &amp; Microphone</strong> — used only while you are actively broadcasting a match, to capture and transmit your live video/audio stream to YouTube. Camera and microphone data is streamed in real time and is not recorded or stored by us.</li>
-      <li><strong>Location (fine/coarse)</strong> — used to show live and nearby cricket matches around you. Location is only accessed while the app is in use and is never sold or shared with advertisers.</li>
+      <li><strong>Location (fine/coarse)</strong> — used on your device to sort live matches by how near they are to you. That reading is not sent to or stored on our servers. When you create a match you can choose to tap &ldquo;Use GPS for nearby discovery&rdquo;; the ground&rsquo;s coordinates are then saved with the match, with any city and ground name you enter, so the match can appear in other users&rsquo; nearby search. This is where the match is played, not a record of where you go. Location is optional and is never sold or shared with advertisers.</li>
+      <li><strong>Notifications</strong> — if you allow them, we store a push token for your device. See <a href="#notifications" style="color:#00E5A0">Notifications</a>.</li>
     </ul>
     <p><strong style="color:#E8EAF0">Usage &amp; Advertising Data</strong></p>
     <ul>
       <li>Crash reports via Firebase Crashlytics (anonymised device info and stack traces only)</li>
       <li>We show ads via Google AdMob. AdMob may collect your device's advertising identifier and general device/network information to serve and measure ads, per <a href="https://policies.google.com/technologies/ads" style="color:#00E5A0">Google's advertising policies</a>. You can limit ad personalisation in your device's ad settings.</li>
-      <li>No other behavioural or cross-app analytics are used</li>
+      <li>App usage statistics via Firebase Analytics: app events such as how many people reach each step before going live, with device type, OS version and an app instance identifier. We do not send it your name, email, phone numbers or match data.</li>
     </ul>
 
     <h2>3. How We Use Your Data</h2>
     <ul>
       <li>Provide core app functionality: ball-by-ball scoring, scorecards, live streaming</li>
-      <li>Sync your match data across sessions via Supabase (your data only, never shared)</li>
+      <li>Sync your match data across sessions via Supabase</li>
+      <li>Show tournament contact numbers only to the people described in <a href="#phone" style="color:#00E5A0">Phone Numbers in Tournaments</a></li>
+      <li>Send the notifications you choose</li>
       <li>Create and manage YouTube Live broadcasts on your behalf when you tap "Go Live"</li>
       <li>Display a live score overlay on your YouTube stream</li>
-      <li>Diagnose crashes and improve app stability</li>
+      <li>Diagnose crashes, improve app stability, and understand which features are used</li>
     </ul>
 
     <h2>4. YouTube API Usage</h2>
@@ -95,7 +102,7 @@
     <h2>5. Data Storage &amp; Security</h2>
     <ul>
       <li>All match data is stored in Supabase (hosted on AWS, eu-west region)</li>
-      <li>Access is controlled by Row-Level Security — you can only read and write your own data</li>
+      <li>Access is controlled by Row-Level Security. Matches and tournaments you make public can be seen by other CricStream users; private ones only by you and the people you share them with. Only you, or a scorer you assign, can change your matches</li>
       <li>Google OAuth tokens are stored in the device's encrypted secure storage (iOS Keychain / Android Keystore)</li>
       <li>We do not sell, rent, or share your personal data with third parties</li>
     </ul>
@@ -106,23 +113,39 @@
       <tr><td>Supabase</td><td>Database &amp; Authentication</td><td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td></tr>
       <tr><td>Google / YouTube</td><td>Sign-In &amp; Live Streaming</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
       <tr><td>Firebase Crashlytics</td><td>Crash reporting</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
+      <tr><td>Firebase Analytics</td><td>App usage statistics</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
+      <tr><td>Expo push service</td><td>Delivering notifications</td><td><a href="https://expo.dev/privacy">expo.dev/privacy</a></td></tr>
+      <tr><td>Firebase Cloud Messaging</td><td>Delivering notifications</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
       <tr><td>Google AdMob</td><td>In-app advertising</td><td><a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></td></tr>
     </table>
 
-    <h2 id="delete">7. Deleting Your Account</h2>
+    <h2 id="phone">7. Phone Numbers in Tournaments</h2>
+    <p>Tournament organisers can add a contact phone number for themselves and for each team&rsquo;s captain. Both are optional.</p>
+    <ul>
+      <li><strong>Organiser&rsquo;s number</strong> — shown on the tournament page to everyone who can see the tournament, so that teams can get in touch. The organiser can change or remove it at any time from the tournament&rsquo;s Edit details.</li>
+      <li><strong>Captains&rsquo; numbers</strong> — visible only to the organiser of that tournament. Never shown on the tournament page, to other teams or to followers.</li>
+    </ul>
+    <p>We do not call, message or verify these numbers, and we do not share them with advertisers or any other third party.</p>
+    <p>If an organiser added your number and you want it removed, ask the organiser or email <a href="mailto:ravisfortune@gmail.com" style="color:#00E5A0">ravisfortune@gmail.com</a>. If an organiser deletes their account, their contact number and the captains&rsquo; numbers they added are erased.</p>
+
+    <h2 id="notifications">8. Notifications</h2>
+    <p>If you allow notifications, we store a push token that lets the Expo push service and Firebase Cloud Messaging deliver alerts to your device, together with the notification types you choose in <strong>Settings &rarr; Notifications</strong> &mdash; for example tournament updates and alerts for matches you follow.</p>
+    <p>The token is deleted when you sign out or delete your account. You can turn notifications off at any time in the app or in your device settings.</p>
+
+    <h2 id="delete">9. Deleting Your Account</h2>
     <p><strong>In the app:</strong> open <strong>Profile &rarr; Delete account</strong> and confirm twice. Deletion happens immediately and cannot be undone.</p>
     <p><strong>Without the app:</strong> email <a href="mailto:ravisfortune@gmail.com?subject=Account%20deletion%20request">ravisfortune@gmail.com</a> from the address your account uses, with the subject &ldquo;Account deletion request&rdquo;. We action these within 7 business days.</p>
-    <p><strong>Deleted straight away:</strong> your login and password, your name, email address and profile photo, and the matches you follow or have pinned.</p>
-    <p><strong>Kept:</strong> the scorecards of matches you scored &mdash; scores, overs and the ball-by-ball record &mdash; along with the teams and squads in them. A match is shared by everyone who played in and followed it, so it is not erased when one person leaves. It is unlinked from you instead: your name no longer appears on it, nobody can edit it afterwards, and nothing ties it back to your account. Your name may still appear in a team line-up, because that was entered as part of the team rather than as part of your account.</p>
+    <p><strong>Deleted straight away:</strong> your login and password, your name, email address and profile photo, your push tokens and notifications, the matches you follow or have pinned, and &mdash; on tournaments you organise &mdash; your contact name and phone number and the captains&rsquo; phone numbers you added.</p>
+    <p><strong>Kept:</strong> the scorecards of matches you scored &mdash; scores, overs and the ball-by-ball record &mdash; along with the teams and squads in them, and the tournaments you organised. A match is shared by everyone who played in and followed it, so it is not erased when one person leaves. It is unlinked from you instead: your name no longer appears on it, nobody can edit it afterwards, and nothing ties it back to your account. Your name may still appear in a team line-up, because that was entered as part of the team rather than as part of your account.</p>
     <p>Anonymised match data is kept for as long as the match record exists. Crash reports already sent to Firebase Crashlytics are anonymous and expire on Google&rsquo;s own schedule.</p>
 
-    <h2>8. Children's Privacy</h2>
+    <h2>10. Children's Privacy</h2>
     <p>CricStream is rated 4+ and does not knowingly collect personal data from children under 13. If you believe a child has provided personal information, contact us and we will delete it promptly.</p>
 
-    <h2>9. Your Rights</h2>
+    <h2>11. Your Rights</h2>
     <p>You may request access to, correction of, or deletion of your personal data at any time by contacting us. If you are in the EU/EEA, you also have the right to lodge a complaint with your local data protection authority.</p>
 
-    <h2>10. Changes to This Policy</h2>
+    <h2>12. Changes to This Policy</h2>
     <p>We may update this policy from time to time. Continued use of the app after changes constitutes acceptance. The "last updated" date above will always reflect the most recent revision.</p>
 
     <hr />
